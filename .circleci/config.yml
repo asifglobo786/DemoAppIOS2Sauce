@@ -69,6 +69,8 @@ jobs:
     environment:
       APP: DemoApp.ipa
       TEST_APP: DemoAppUITests-Runner.ipa
+      SAUCE_USERNAME: ENV["SAUCE_USERNAME"]
+      SAUCE_ACCESS_KEY: ENV["SAUCE_ACCESS_KEY"]
     steps:
       - checkout
       - attach_workspace:
@@ -82,6 +84,8 @@ jobs:
       APP: DemoApp.ipa
       TEST_APP: DemoAppUITests-Runner.ipa
       TEST_LIST_FILE: test_classes_and_tests.txt
+      SAUCE_USERNAME: ENV["SAUCE_USERNAME"]
+      SAUCE_ACCESS_KEY: ENV["SAUCE_ACCESS_KEY"]
     steps:
       - checkout
       - attach_workspace:
@@ -95,6 +99,8 @@ jobs:
     environment:
       APP: DemoApp-Simulator.zip
       TEST_APP: DemoAppUITests-Runner-Simulator.zip
+      SAUCE_USERNAME: ENV["SAUCE_USERNAME"]
+      SAUCE_ACCESS_KEY: ENV["SAUCE_ACCESS_KEY"]
     steps:
       - checkout
       - attach_workspace:
